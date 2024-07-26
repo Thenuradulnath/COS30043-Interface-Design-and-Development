@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Credit Task 3.3</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+<body>
+    <div id="app">
+        <h2>Compute App</h2>
+        <p>
+            <label for="weight">Enter weight in kilograms:</label>
+            <input type="number" id="weight" v-model="numWt">
+        </p>
+        <p>
+            <label for="height">Enter height in centimeters:</label>
+            <input type="number" id="height" v-model="numHt">
+        </p>
+        <p>
+            Computed BMI is: {{ numBMI.toFixed(2) }}
+        </p>
+
+    </div>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    numWt: 0,
+                    numHt: 0,
+                };
+            },
+            computed: {
+        numBMI() {
+          if (this.numHt > 0) {
+            const heightInMeters = this.numHt / 100;
+            return this.numWt / (heightInMeters * heightInMeters);
+          }
+          return 0;
+        },
+            },
+            fun2: {
+                message(bmi) {
+
+                    if (bmi < 18.5) {
+                        return "Underweight!! gain more weight ";
+                    } else if (bmi < 25) {
+                        return "Normal weight. Good work and maintain it!";
+                    } else if (bmi < 30) {
+                        return "Overweight! do some exercise plz!";
+                    } else {
+                        return "Obese!!! Get ur ass up and do exercise";
+                    }
+                },
+            },
+        });
+
+        app.mount('#app');
+    </script>
+</body>
+
+</html>

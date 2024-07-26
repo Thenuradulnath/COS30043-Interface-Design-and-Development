@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>String Te</title>
+	<meta charset="utf-8" >
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+	</head>
+<body>
+    <div id="app">
+		<label for="Username">Please enter your name:</label>
+		<input v-model="strName" id="Username">
+		<p>Hello  {{ strName === 'thenura' ? 'awesome' : 'wrong' }}!</p>
+</div>
+<script src="C:\assignments\Interface\Tasks\Framework\js\vue.js"></script>
+<script>
+Vue.createApp({
+		data() {
+			return {
+				strName: ""
+			}
+		}
+	}).mount('#app');
+</script>
+</body>
+</html>

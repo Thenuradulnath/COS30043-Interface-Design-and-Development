@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Credit Task 3.3</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="app">
+    <h2>Compute App</h2>
+    <p>
+      <label for="weight">Enter weight in kilograms:</label>
+      <input type="number" id="weight" v-model="numWt">
+    </p>
+    <p>
+      <label for="height">Enter height in centimeters:</label>
+      <input type="number" id="height" v-model="numHt">
+    </p>
+    <p>
+      Computed BMI is: {{ numBMI.toFixed(2) }}
+    </p>
+    <p v-html="Message(numBMI)"></p>
+  </div>
+        <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        Vue.createApp({
+            data(){
+                return{
+                    numWt: 0,
+                    numHt: 0,
+                }
+            },
+            computed:{
+                numBMI(){
+                    if (this.numHt > 0){
+                        const heightInMeters = this.numHt / 100;
+                  return this.numWt / (heightInMeters * heightInMeters);
+                        }
+                    else {
+                        return 0;
+                    }
+                },
+            },
+            methods:{
+                message(numBMI){
+
+                    if (bmi==null){
+                        return "Try Again Later"
+                    }
+                    else if (0 < numBMI < 18.5){
+                        return "Under Weight gain more weight plz!!";
+                    }
+                    else if (25 < numBMI < 30){
+                        return "Normal weight. Good condition, and maintain it.";
+                    }
+                    else if(25 < numBMI < 30){
+                        return "Overweight.Do some exerciese";
+                    }
+                    else "Obese. Do some exerciese immidiately!!";
+                }
+                },
+            });
+    app.mount("#app");
+  </script>
+</body>
+</html>
+
+

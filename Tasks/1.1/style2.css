@@ -1,0 +1,127 @@
+.b {
+    background-image: url("background.jpeg");
+    background-size: 100%;
+    background-position-y: -95px;
+}
+
+.i {
+    position: absolute;
+    width: 120px;
+    margin-top: 14px;
+    margin-left: 40px;
+}
+
+.li {
+    list-style: none;
+    position: absolute;
+    margin-left: 300px;
+    margin-top: 10px;
+}
+
+.li1 {
+    display: inline;
+    margin-left: 30px;
+    font-family: "Gotham";
+    color: white;
+    font-size: 15px;
+}
+
+.li2 {
+    display: inline;
+    margin-left: 750px;
+    font-family: "Gotham";
+    color: white;
+    font-size: 15px;
+}
+
+@font-face {
+    font-family: "Gotham";
+    src: url("Gotham.woff2");
+}
+
+.p1 {
+    font-family: "Gotham";
+    position: absolute;
+    margin-top: 110px;
+    margin-left: 570px;
+    position: absolute;
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+}
+
+.d1 {
+    height: 120px;
+    width: 790px;
+    position: absolute;
+    margin-top: 500px;
+    margin-left: 350px;
+}
+
+.l3 {
+    list-style: none;
+    position: absolute;
+    margin-left: -120px;
+}
+
+.li3 {
+    display: inline-block;
+    margin-left: 75px;
+    margin-top: -10px;
+}
+
+.d2 {
+    font-family: "Gotham";
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+}
+.d3{
+    font-family: "Gotham";
+    font-size: 12px;
+    color: white;
+    margin-top: 10px;
+    margin-left: 8px;
+}
+.d4{
+    font-family: "Gotham";
+    font-size: 12px;
+    color: white;
+    margin-top: 10px;
+    margin-left: -7px;
+}
+.d5{
+    font-family: "Gotham";
+    font-size: 12px;
+    color: white;
+    margin-top: 10px;
+}
+.li4{
+    margin-left: 590px;
+    margin-top: -50px;
+}
+.b1{
+    height: 42px;
+    width: 205px;
+    font-family: "Gotham";
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 14px;
+    color: white;
+    border-style: solid;
+    border-width: 3px;
+    border-color: white;
+    border-radius: 5px;
+}
+.b1:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+.li1:hover{
+    background-color: rgba(240, 248, 255, 0.299);
+    cursor: pointer;
+    box-shadow: 200px 200px 100px 100px rgba(240, 248, 255, 0);
+    transition-duration: 0.5s;
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="C:\assignments\bootstrap-5.1.3-dist\bootstrap-5.1.3-dist\css\bootstrap.min.css" rel="stylesheet">
+    <title>Registration Form</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="container">
+            <h1>Registration</h1>
+            <form @submit.prevent="checkForm" action="http://mercury.swin.edu.au/it000000/formtest.php" method="post"
+                ref="form">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <div class="form-group">
+                        <label for="fname">First Name</label>
+                        <input type="text" class="form-control" id="fname" name="First Name" v-model.trim="fname"
+                            placeholder="Enter your First Name">
+                        <p v-if="errors.fname" class="text-danger">{{ errors.fname }}</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="lname">Last Name</label>
+                        <input type="text" class="form-control" id="lname" name="lname" v-model.trim="lname"
+                            placeholder="Enter your Last Name">
+                        <p v-if="errors.lname" class="text-danger">{{ errors.lname }}</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" class="form-control" id="dob" name="dob" v-model="dob">
+                        <p v-if="errors.dob" class="text-danger">{{errors.dob}}</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="mobile">Mobile Number</label>
+                        <input type="text" class="form-control" id="mobile" name="mobile" v-model.trim="mobile"
+                            placeholder="Enter your Mobile Number">
+                        <p v-if="errors.mobile" class="text-danger">{{ errors.mobile }}</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" v-model.trim="email"
+                            placeholder="Enter your Email">
+                        <p v-if="errors.email" class="text-danger">{{ errors.email }}</p>
+                    </div>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Address Information</legend>
+                    <div class="form-group">
+                        <label for="street">Street Address</label>
+                        <input type="text" class="form-control" id="street" name="street" v-model.trim="street"
+                            placeholder="Enter your Street">
+                    </div>
+                    <div class="form-group">
+                        <label for="suburb">Suburb</label>
+                        <input type="text" class="form-control" id="suburb" name="suburb" v-model.trim="suburb"
+                            placeholder="Enter your Suburb">
+                    </div>
+                    <div class="form-group">
+                        <label for="postcode">Postcode</label>
+                        <input type="text" class="form-control" id="postcode" name="postcode" v-model.trim="postcode"
+                            placeholder="Enter your Postcode">
+                        <p v-if="errors.postcode" class="text-danger">
+                            {{ errors.postcode }}
+                        </p>
+                    </div>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Login Information</legend>
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" id="username" name="username" v-model.trim="username"
+                            placeholder="Enter your Username">
+                        <p v-if="errors.username" class="text-danger">
+                            {{ errors.username }}
+                        </p>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" v-model="password"
+                            placeholder="Enter your password">
+                        <p v-if="errors.password" class="text-danger">
+                            {{ errors.password }}
+                        </p>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword"
+                            v-model="confirmPassword" placeholder="Confirm your Password">
+                        <p v-if="errors.confirmPassword" class="text-danger">
+                            {{ errors.confirmPassword }}
+                        </p>
+                    </div>
+                </fieldset>
+                <br>
+                <div class="form-group">
+                    <input type="checkbox" class="form-check-input" id="termsConditions">
+                    <label class="form-check-label" for="termsConditions">I agree to the <a href="https://youtu.be/dQw4w9WgXcQ">terms and conditions.</a></label>
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary mt-6">Submit</button>
+                <button type="reset" class="btn btn-danger mt-6 ml-2">Cancel</button>
+            </form>
+        </div>
+    </div>
+    <!-- VueJS Script -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/vue-router@4"></script>
+    <!-- vue-router -->
+    <!-- Additional JavaScript -->
+    <script src="registration2.js"></script>
+</body>
+
+</html>

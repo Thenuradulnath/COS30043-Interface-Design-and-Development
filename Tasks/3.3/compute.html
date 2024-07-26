@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Credit Task 3.3</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div id="app">
+        <h2>Compute App</h2>
+        <p>
+            <label for="weight">Enter weight in kilograms:</label>
+            <input v-model="numWt" type="number" id="weight">
+        </p>
+        <p>
+            <label for="height">Enter height in centimeters:</label>
+            <input v-model="numHt" type="number" id="height">
+        </p>
+        <p>
+            Computed BMI is: {{ numBMI.toFixed(2) }}
+        </p>
+        <p v-html="Message(numBMI)"></p>
+    </div>
+
+  <script src="https://unpkg.com/vue@3"></script>
+  <script src="C:\assignments\Interface\Tasks\3.3\func.js"></script>
+</body>
+</html>
